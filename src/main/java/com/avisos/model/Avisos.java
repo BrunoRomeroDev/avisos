@@ -2,17 +2,16 @@ package com.avisos.model;
 
 import java.sql.Date;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-@Getter
-@Setter
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
 @NoArgsConstructor
 @Entity
 public class Avisos {
@@ -24,19 +23,11 @@ public class Avisos {
 	
 	@Column(nullable = false)
 	private String titulo;
-	@Column(columnDefinition = "TEXT", nullable = false)
+	@Column(name ="TEXT",nullable = false)
 	private String descrição;
 	@Column
 	private Date data;
 	
-	
-	public Avisos(Long id, String titulo, String descrição, Date data) {
-		super();
-		this.id = id;
-		this.titulo = titulo;
-		this.descrição = descrição;
-		this.data = data;
-	}
 	
 	
 

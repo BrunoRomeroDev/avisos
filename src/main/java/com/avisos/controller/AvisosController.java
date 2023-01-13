@@ -11,7 +11,7 @@ import com.avisos.model.Avisos;
 import com.avisos.service.AvisosServcie;
 
 @RestController
-@RequestMapping("/avisos")
+@RequestMapping("/api/avisos")
 public class AvisosController {
 
 	@Autowired
